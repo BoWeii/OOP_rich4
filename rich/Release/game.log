@@ -1,0 +1,27 @@
+﻿  StdAfx.cpp
+  audio.cpp
+  Building.cpp
+  BuyUI.cpp
+  Card.cpp
+  Dice.cpp
+  GameMap.cpp
+  game.cpp
+  gameDoc.cpp
+  GameOver.cpp
+  gameView.cpp
+  House.cpp
+  Integer.cpp
+  Lottery.cpp
+  MainFrm.cpp
+  OthersUI.cpp
+  Role.cpp
+  Round.cpp
+  StartMenu.cpp
+  Station.cpp
+  gamelib.cpp
+  正在產生程式碼...
+  正在編譯...
+  mygame.cpp
+  Store.cpp
+  正在產生程式碼...
+  game.vcxproj -> D:\U2\OOP_Project\rich\.\Release\game.exe

@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest|Win32">
+      <Configuration>UnitTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DDD280D7-4B85-4B03-BBC4-C46CA9BECCCB}</ProjectGuid>
+    <RootNamespace>game</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">.\UnitTest\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">.\UnitTest\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\Microsoft DirectX SDK %28February 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\Microsoft DirectX SDK %28February 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/game.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/game.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/game.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/game.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/game.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/game.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/game.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ddraw.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/game.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/game.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/game.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\UnitTest/game.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_UNITTEST;_CRT_SECURE_NO_DEPRECATE;WINVER=0x400;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\UnitTest/game.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\UnitTest/</AssemblerListingLocation>
+      <ObjectFileName>.\UnitTest/</ObjectFileName>
+      <ProgramDataBaseFileName>.\UnitTest/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;cppunitd.lib;testrunnerd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\UnitTest/game.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\UnitTest/game.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\UnitTest/game.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Res\ball.bmp" />
+    <None Include="RES\bmp0.bmp" />
+    <None Include="RES\bmp1.bmp" />
+    <None Include="RES\bmp10.bmp" />
+    <None Include="RES\bmp2.bmp" />
+    <None Include="RES\bmp3.bmp" />
+    <None Include="RES\bmp4.bmp" />
+    <None Include="RES\bmp5.bmp" />
+    <None Include="RES\bmp6.bmp" />
+    <None Include="RES\bmp7.bmp" />
+    <None Include="RES\bmp8.bmp" />
+    <None Include="RES\bmp9.bmp" />
+    <None Include="RES\center.bmp" />
+    <None Include="RES\continue.bmp" />
+    <None Include="Res\corner.bmp" />
+    <None Include="RES\eraser1.bmp" />
+    <None Include="RES\eraser2.bmp" />
+    <None Include="RES\eraser3.bmp" />
+    <None Include="res\game.rc2" />
+    <None Include="RES\gamecurs.cur" />
+    <None Include="res\gameDoc.ico" />
+    <None Include="RES\help.bmp" />
+    <None Include="RES\loading.bmp" />
+    <None Include="RES\ntutcsie.bmp" />
+    <None Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\audio.cpp" />
+    <ClCompile Include="Source\Building.cpp" />
+    <ClCompile Include="Source\BuyUI.cpp" />
+    <ClCompile Include="Source\Card.cpp" />
+    <ClCompile Include="Source\Dice.cpp" />
+    <ClCompile Include="Source\GameMap.cpp" />
+    <ClCompile Include="Source\game.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Source\gameDoc.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Source\GameOver.cpp" />
+    <ClCompile Include="Source\gameView.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Source\House.cpp" />
+    <ClCompile Include="Source\Integer.cpp" />
+    <ClCompile Include="Source\Lottery.cpp" />
+    <ClCompile Include="Source\MainFrm.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Source\OthersUI.cpp" />
+    <ClCompile Include="Source\Role.cpp" />
+    <ClCompile Include="Source\Round.cpp" />
+    <ClCompile Include="Source\StartMenu.cpp" />
+    <ClCompile Include="Source\Station.cpp" />
+    <ClCompile Include="Source\StdAfx.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source\gamelib.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">UnitTest/</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">UnitTest/</ProgramDataBaseFileName>
+    </ClCompile>
+    <ClCompile Include="Source\mygame.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Source\Store.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\audio.h" />
+    <ClInclude Include="Source\Building.h" />
+    <ClInclude Include="Source\BuyUI.h" />
+    <ClInclude Include="Source\Card.h" />
+    <ClInclude Include="Source\Dice.h" />
+    <ClInclude Include="Source\GameMap.h" />
+    <ClInclude Include="Source\game.h" />
+    <ClInclude Include="Source\gameDoc.h" />
+    <ClInclude Include="Source\GameOver.h" />
+    <ClInclude Include="Source\gameView.h" />
+    <ClInclude Include="Source\House.h" />
+    <ClInclude Include="Source\Integer.h" />
+    <ClInclude Include="Source\Lottery.h" />
+    <ClInclude Include="Source\MainFrm.h" />
+    <ClInclude Include="Source\OthersUI.h" />
+    <ClInclude Include="Source\Resource.h" />
+    <ClInclude Include="Source\Role.h" />
+    <ClInclude Include="Source\Round.h" />
+    <ClInclude Include="Source\StartMenu.h" />
+    <ClInclude Include="Source\Station.h" />
+    <ClInclude Include="Source\StdAfx.h" />
+    <ClInclude Include="Source\gamelib.h" />
+    <ClInclude Include="Source\mygame.h" />
+    <ClInclude Include="Source\Store.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Source\game.rc">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\game.ico" />
+    <Image Include="..\map\0.bmp" />
+    <Image Include="..\map\1.bmp" />
+    <Image Include="..\map\10.bmp" />
+    <Image Include="..\map\11.bmp" />
+    <Image Include="..\map\12.bmp" />
+    <Image Include="..\map\13.bmp" />
+    <Image Include="..\map\14.bmp" />
+    <Image Include="..\map\2.bmp" />
+    <Image Include="..\map\3.bmp" />
+    <Image Include="..\map\4.bmp" />
+    <Image Include="..\map\5.bmp" />
+    <Image Include="..\map\6.bmp" />
+    <Image Include="..\map\7.bmp" />
+    <Image Include="..\map\8.bmp" />
+    <Image Include="..\map\9.bmp" />
+    <Image Include="Bitmaps\0.bmp" />
+    <Image Include="Bitmaps\1.bmp" />
+    <Image Include="Bitmaps\10.bmp" />
+    <Image Include="Bitmaps\11.bmp" />
+    <Image Include="Bitmaps\12.bmp" />
+    <Image Include="Bitmaps\13.bmp" />
+    <Image Include="Bitmaps\14.bmp" />
+    <Image Include="Bitmaps\2.bmp" />
+    <Image Include="Bitmaps\3.bmp" />
+    <Image Include="Bitmaps\4.bmp" />
+    <Image Include="Bitmaps\5.bmp" />
+    <Image Include="Bitmaps\6.bmp" />
+    <Image Include="Bitmaps\7.bmp" />
+    <Image Include="Bitmaps\8.bmp" />
+    <Image Include="Bitmaps\9.bmp" />
+    <Image Include="Bitmaps\blue.bmp" />
+    <Image Include="Bitmaps\green.bmp" />
+    <Image Include="Bitmaps\star.bmp" />
+    <Image Include="res\0.bmp" />
+    <Image Include="res\1.bmp" />
+    <Image Include="res\10.bmp" />
+    <Image Include="res\11.bmp" />
+    <Image Include="res\12.bmp" />
+    <Image Include="res\13.bmp" />
+    <Image Include="res\14.bmp" />
+    <Image Include="res\2.bmp" />
+    <Image Include="res\3.bmp" />
+    <Image Include="res\4.bmp" />
+    <Image Include="res\5.bmp" />
+    <Image Include="res\6.bmp" />
+    <Image Include="res\7.bmp" />
+    <Image Include="res\8.bmp" />
+    <Image Include="res\9.bmp" />
+    <Image Include="RES\bankrupt.bmp" />
+    <Image Include="RES\begin\about.bmp" />
+    <Image Include="RES\begin\aboutIcon.bmp" />
+    <Image Include="RES\begin\explain.bmp" />
+    <Image Include="RES\begin\explainIcon.bmp" />
+    <Image Include="RES\begin\Ini.bmp" />
+    <Image Include="res\bitmap3.bmp" />
+    <Image Include="res\bitmap4.bmp" />
+    <Image Include="res\bitmap7.bmp" />
+    <Image Include="RES\bomb\bomb1.bmp" />
+    <Image Include="RES\bomb\bomb10.bmp" />
+    <Image Include="RES\bomb\bomb11.bmp" />
+    <Image Include="RES\bomb\bomb12.bmp" />
+    <Image Include="RES\bomb\bomb13.bmp" />
+    <Image Include="RES\bomb\bomb14.bmp" />
+    <Image Include="RES\bomb\bomb15.bmp" />
+    <Image Include="RES\bomb\bomb2.bmp" />
+    <Image Include="RES\bomb\bomb3.bmp" />
+    <Image Include="RES\bomb\bomb4.bmp" />
+    <Image Include="RES\bomb\bomb5.bmp" />
+    <Image Include="RES\bomb\bomb6.bmp" />
+    <Image Include="RES\bomb\bomb7.bmp" />
+    <Image Include="RES\bomb\bomb8.bmp" />
+    <Image Include="RES\bomb\bomb9.bmp" />
+    <Image Include="RES\building\HOUSE_1.bmp" />
+    <Image Include="RES\building\HOUSE_2.bmp" />
+    <Image Include="RES\building\HOUSE_3.bmp" />
+    <Image Include="RES\building\LAND.bmp" />
+    <Image Include="RES\building\STORE.bmp" />
+    <Image Include="RES\BuyUI\btnsell.bmp" />
+    <Image Include="RES\BuyUI\btnsellc.bmp" />
+    <Image Include="RES\BuyUI\buy.bmp" />
+    <Image Include="RES\BuyUI\cardRandom.bmp" />
+    <Image Include="RES\BuyUI\cardX.bmp" />
+    <Image Include="RES\BuyUI\dollar.bmp" />
+    <Image Include="RES\BuyUI\draw.bmp" />
+    <Image Include="RES\BuyUI\eight.bmp" />
+    <Image Include="RES\BuyUI\five.bmp" />
+    <Image Include="RES\BuyUI\four.bmp" />
+    <Image Include="RES\BuyUI\level1.bmp" />
+    <Image Include="RES\BuyUI\level1c.bmp" />
+    <Image Include="RES\BuyUI\level2.bmp" />
+    <Image Include="RES\BuyUI\level2c.bmp" />
+    <Image Include="RES\BuyUI\level3.bmp" />
+    <Image Include="RES\BuyUI\level3c.bmp" />
+    <Image Include="RES\BuyUI\nine.bmp" />
+    <Image Include="RES\BuyUI\OK.bmp" />
+    <Image Include="RES\BuyUI\one.bmp" />
+    <Image Include="RES\BuyUI\poor.bmp" />
+    <Image Include="RES\BuyUI\sell.bmp" />
+    <Image Include="RES\BuyUI\seven.bmp" />
+    <Image Include="RES\BuyUI\six.bmp" />
+    <Image Include="RES\BuyUI\three.bmp" />
+    <Image Include="RES\BuyUI\title.bmp" />
+    <Image Include="RES\BuyUI\two.bmp" />
+    <Image Include="RES\BuyUI\UI.bmp" />
+    <Image Include="RES\BuyUI\zero.bmp" />
+    <Image Include="RES\card\bombCard.bmp" />
+    <Image Include="RES\card\carCard.bmp" />
+    <Image Include="RES\card\next.bmp" />
+    <Image Include="RES\card\previous.bmp" />
+    <Image Include="RES\card\stealCard.bmp" />
+    <Image Include="RES\Cpn\CP2.bmp" />
+    <Image Include="RES\Cpn\CP3.bmp" />
+    <Image Include="RES\Cpn\CP4.bmp" />
+    <Image Include="RES\Cpn\P2.bmp" />
+    <Image Include="RES\Cpn\P3.bmp" />
+    <Image Include="RES\Cpn\P4.bmp" />
+    <Image Include="RES\dice1.bmp" />
+    <Image Include="RES\dice2.bmp" />
+    <Image Include="RES\dice3.bmp" />
+    <Image Include="RES\dice4.bmp" />
+    <Image Include="RES\dice5.bmp" />
+    <Image Include="RES\dice6.bmp" />
+    <Image Include="RES\Dice\dice1.bmp" />
+    <Image Include="RES\Dice\dice2.bmp" />
+    <Image Include="RES\Dice\dice3.bmp" />
+    <Image Include="RES\Dice\dice4.bmp" />
+    <Image Include="RES\Dice\dice5.bmp" />
+    <Image Include="RES\Dice\dice6.bmp" />
+    <Image Include="RES\Dice\question.bmp" />
+    <Image Include="RES\dot.bmp" />
+    <Image Include="RES\LotteryUI\1.bmp" />
+    <Image Include="RES\LotteryUI\10.bmp" />
+    <Image Include="RES\LotteryUI\10C.bmp" />
+    <Image Include="RES\LotteryUI\10T.bmp" />
+    <Image Include="RES\LotteryUI\1C.bmp" />
+    <Image Include="RES\LotteryUI\1T.bmp" />
+    <Image Include="RES\LotteryUI\2.bmp" />
+    <Image Include="RES\LotteryUI\2C.bmp" />
+    <Image Include="RES\LotteryUI\2T.bmp" />
+    <Image Include="RES\LotteryUI\3.bmp" />
+    <Image Include="RES\LotteryUI\3C.bmp" />
+    <Image Include="RES\LotteryUI\3T.bmp" />
+    <Image Include="RES\LotteryUI\4.bmp" />
+    <Image Include="RES\LotteryUI\4C.bmp" />
+    <Image Include="RES\LotteryUI\4T.bmp" />
+    <Image Include="RES\LotteryUI\5.bmp" />
+    <Image Include="RES\LotteryUI\5C.bmp" />
+    <Image Include="RES\LotteryUI\5T.bmp" />
+    <Image Include="RES\LotteryUI\6.bmp" />
+    <Image Include="RES\LotteryUI\6C.bmp" />
+    <Image Include="RES\LotteryUI\6T.bmp" />
+    <Image Include="RES\LotteryUI\7.bmp" />
+    <Image Include="RES\LotteryUI\7C.bmp" />
+    <Image Include="RES\LotteryUI\7T.bmp" />
+    <Image Include="RES\LotteryUI\8.bmp" />
+    <Image Include="RES\LotteryUI\8C.bmp" />
+    <Image Include="RES\LotteryUI\8T.bmp" />
+    <Image Include="RES\LotteryUI\9.bmp" />
+    <Image Include="RES\LotteryUI\9C.bmp" />
+    <Image Include="RES\LotteryUI\9T.bmp" />
+    <Image Include="RES\LotteryUI\L_UI_BK.bmp" />
+    <Image Include="RES\LotteryUI\ok.bmp" />
+    <Image Include="RES\LotteryUI\okT.bmp" />
+    <Image Include="RES\LotteryUI\open1.bmp" />
+    <Image Include="RES\LotteryUI\open10.bmp" />
+    <Image Include="RES\LotteryUI\open2.bmp" />
+    <Image Include="RES\LotteryUI\open3.bmp" />
+    <Image Include="RES\LotteryUI\open4.bmp" />
+    <Image Include="RES\LotteryUI\open5.bmp" />
+    <Image Include="RES\LotteryUI\open6.bmp" />
+    <Image Include="RES\LotteryUI\open7.bmp" />
+    <Image Include="RES\LotteryUI\open8.bmp" />
+    <Image Include="RES\LotteryUI\open9.bmp" />
+    <Image Include="RES\LotteryUI\R1_num.bmp" />
+    <Image Include="RES\LotteryUI\R2_num.bmp" />
+    <Image Include="RES\LotteryUI\R3_num.bmp" />
+    <Image Include="RES\LotteryUI\R4_num.bmp" />
+    <Image Include="RES\LotteryUI\random1.bmp" />
+    <Image Include="RES\LotteryUI\random2.bmp" />
+    <Image Include="RES\LotteryUI\random3.bmp" />
+    <Image Include="RES\LotteryUI\random4.bmp" />
+    <Image Include="RES\LotteryUI\random5.bmp" />
+    <Image Include="RES\LotteryUI\random6.bmp" />
+    <Image Include="RES\LotteryUI\random7.bmp" />
+    <Image Include="res\Map\0.bmp" />
+    <Image Include="res\Map\1.bmp" />
+    <Image Include="res\Map\10.bmp" />
+    <Image Include="res\Map\11.bmp" />
+    <Image Include="res\Map\12.bmp" />
+    <Image Include="res\Map\13.bmp" />
+    <Image Include="res\Map\14.bmp" />
+    <Image Include="res\Map\2.bmp" />
+    <Image Include="res\Map\3.bmp" />
+    <Image Include="res\Map\4.bmp" />
+    <Image Include="res\Map\5.bmp" />
+    <Image Include="res\Map\6.bmp" />
+    <Image Include="res\Map\7.bmp" />
+    <Image Include="res\Map\8.bmp" />
+    <Image Include="res\Map\9.bmp" />
+    <Image Include="RES\OthersUI\bag_option.bmp" />
+    <Image Include="RES\OthersUI\bag_option_choosed.bmp" />
+    <Image Include="RES\OthersUI\logo_house.bmp" />
+    <Image Include="RES\OthersUI\logo_money.bmp" />
+    <Image Include="RES\OthersUI\lottery_option.bmp" />
+    <Image Include="RES\OthersUI\lottery_option_choosed.bmp" />
+    <Image Include="RES\OthersUI\menu_BK.bmp" />
+    <Image Include="RES\question.bmp" />
+    <Image Include="RES\R1-1.bmp" />
+    <Image Include="RES\R1-10.bmp" />
+    <Image Include="RES\R1-11.bmp" />
+    <Image Include="RES\R1-12.bmp" />
+    <Image Include="RES\R1-13.bmp" />
+    <Image Include="RES\R1-14.bmp" />
+    <Image Include="RES\R1-15.bmp" />
+    <Image Include="RES\R1-16.bmp" />
+    <Image Include="RES\R1-2.bmp" />
+    <Image Include="RES\R1-3.bmp" />
+    <Image Include="RES\R1-4.bmp" />
+    <Image Include="RES\R1-5.bmp" />
+    <Image Include="RES\R1-6.bmp" />
+    <Image Include="RES\R1-7.bmp" />
+    <Image Include="RES\R1-8.bmp" />
+    <Image Include="RES\R1-9.bmp" />
+    <Image Include="res\role\bitmap10.bmp" />
+    <Image Include="res\role\bitmap7.bmp" />
+    <Image Include="RES\Role\R1-1.bmp" />
+    <Image Include="RES\Role\R1-10.bmp" />
+    <Image Include="RES\Role\R1-11.bmp" />
+    <Image Include="RES\Role\R1-12.bmp" />
+    <Image Include="RES\Role\R1-13.bmp" />
+    <Image Include="RES\Role\R1-14.bmp" />
+    <Image Include="RES\Role\R1-15.bmp" />
+    <Image Include="RES\Role\R1-16.bmp" />
+    <Image Include="RES\Role\R1-2.bmp" />
+    <Image Include="RES\Role\R1-3.bmp" />
+    <Image Include="RES\Role\R1-4.bmp" />
+    <Image Include="RES\Role\R1-5.bmp" />
+    <Image Include="RES\Role\R1-6.bmp" />
+    <Image Include="RES\Role\R1-7.bmp" />
+    <Image Include="RES\Role\R1-8.bmp" />
+    <Image Include="RES\Role\R1-9.bmp" />
+    <Image Include="RES\Role\R2-1.bmp" />
+    <Image Include="RES\Role\R2-10.bmp" />
+    <Image Include="RES\Role\R2-11.bmp" />
+    <Image Include="RES\Role\R2-12.bmp" />
+    <Image Include="RES\Role\R2-13.bmp" />
+    <Image Include="RES\Role\R2-14.bmp" />
+    <Image Include="RES\Role\R2-15.bmp" />
+    <Image Include="RES\Role\R2-16.bmp" />
+    <Image Include="RES\Role\R2-2.bmp" />
+    <Image Include="RES\Role\R2-3.bmp" />
+    <Image Include="RES\Role\R2-4.bmp" />
+    <Image Include="RES\Role\R2-5.bmp" />
+    <Image Include="RES\Role\R2-6.bmp" />
+    <Image Include="RES\Role\R2-7.bmp" />
+    <Image Include="RES\Role\R2-8.bmp" />
+    <Image Include="RES\Role\R2-9.bmp" />
+    <Image Include="RES\Role\R3-1.bmp" />
+    <Image Include="RES\Role\R3-10.bmp" />
+    <Image Include="RES\Role\R3-11.bmp" />
+    <Image Include="RES\Role\R3-12.bmp" />
+    <Image Include="RES\Role\R3-13.bmp" />
+    <Image Include="RES\Role\R3-14.bmp" />
+    <Image Include="RES\Role\R3-15.bmp" />
+    <Image Include="RES\Role\R3-16.bmp" />
+    <Image Include="RES\Role\R3-2.bmp" />
+    <Image Include="RES\Role\R3-3.bmp" />
+    <Image Include="RES\Role\R3-4.bmp" />
+    <Image Include="RES\Role\R3-5.bmp" />
+    <Image Include="RES\Role\R3-6.bmp" />
+    <Image Include="RES\Role\R3-7.bmp" />
+    <Image Include="RES\Role\R3-8.bmp" />
+    <Image Include="RES\Role\R3-9.bmp" />
+    <Image Include="RES\Role\R4-1.bmp" />
+    <Image Include="RES\Role\R4-10.bmp" />
+    <Image Include="RES\Role\R4-11.bmp" />
+    <Image Include="RES\Role\R4-12.bmp" />
+    <Image Include="RES\Role\R4-13.bmp" />
+    <Image Include="RES\Role\R4-14.bmp" />
+    <Image Include="RES\Role\R4-15.bmp" />
+    <Image Include="RES\Role\R4-16.bmp" />
+    <Image Include="RES\Role\R4-2.bmp" />
+    <Image Include="RES\Role\R4-3.bmp" />
+    <Image Include="RES\Role\R4-4.bmp" />
+    <Image Include="RES\Role\R4-5.bmp" />
+    <Image Include="RES\Role\R4-6.bmp" />
+    <Image Include="RES\Role\R4-7.bmp" />
+    <Image Include="RES\Role\R4-8.bmp" />
+    <Image Include="RES\Role\R4-9.bmp" />
+    <Image Include="RES\steal\steal1.bmp" />
+    <Image Include="RES\steal\steal2.bmp" />
+    <Image Include="RES\steal\steal3.bmp" />
+    <Image Include="RES\steal\steal4.bmp" />
+    <Image Include="RES\steal\steal5.bmp" />
+    <Image Include="RES\steal\steal6.bmp" />
+    <Image Include="RES\Transportation\T1-1.bmp" />
+    <Image Include="RES\Transportation\T1-10.bmp" />
+    <Image Include="RES\Transportation\T1-11.bmp" />
+    <Image Include="RES\Transportation\T1-12.bmp" />
+    <Image Include="RES\Transportation\T1-13.bmp" />
+    <Image Include="RES\Transportation\T1-14.bmp" />
+    <Image Include="RES\Transportation\T1-15.bmp" />
+    <Image Include="RES\Transportation\T1-16.bmp" />
+    <Image Include="RES\Transportation\T1-2.bmp" />
+    <Image Include="RES\Transportation\T1-3.bmp" />
+    <Image Include="RES\Transportation\T1-4.bmp" />
+    <Image Include="RES\Transportation\T1-5.bmp" />
+    <Image Include="RES\Transportation\T1-6.bmp" />
+    <Image Include="RES\Transportation\T1-7.bmp" />
+    <Image Include="RES\Transportation\T1-8.bmp" />
+    <Image Include="RES\Transportation\T1-9.bmp" />
+    <Image Include="RES\Win.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Source\game.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
